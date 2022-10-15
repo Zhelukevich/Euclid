@@ -6,20 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Euclid</title>
+  <link rel="preload" href="font/Montserrat-Bold.woff2" as="font">
+  <link rel="preload" href="font/Montserrat-ExtraBold.woff2" as="font">
+  <link rel="preload" href="font/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="font/Montserrat-Regular.woff2" as="font">
+  <link rel="preload" href="font/Montserrat-SemiBold.woff2" as="font">
+  <link rel="preload" href="font/" as="font">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style-min.css">
+  <link rel="stylesheet" href="css/media-min.css">
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script defer src="js/script-min.js"></script>
 </head>
 
 <body>
 
-
   <!-- burger -->
   <nav id="burgerNav" class="haeder__burger">
-    <button id="burgerNav__exit" class="burgerNav__exit btn-reset" aria-label="открыть меню">
+    <button id="burgerNav__exit" class="burgerNav__exit btn-reset" aria-label="зкрыть меню">
       <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="2.09082" width="29.5699" height="2.95699" transform="rotate(45 2.09082 0)" fill="#333333" />
         <rect y="20.9092" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9092)" fill="#333333" />
@@ -47,7 +55,7 @@
 
   <header class="header flex">
     <div class="container header__container flex">
-      <button id="burger" class="btn-reset burger">
+      <button id="burger" class="btn-reset burger" aria-label="открыть меню">
         <svg class="burger__nav" width="30" height="23" viewBox="0 0 30 23" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="3" fill="#333333" />
@@ -57,7 +65,8 @@
       </button>
 
       <!-- header -->
-      <a href="#" class="header__link logo"><img class="header__logo" src="img/Logo.svg" alt="Euclid"></a>
+      <a href="#" class="header__link logo"><img class="header__logo" src="img/Logo.svg" loading="lazy"
+          alt="Euclid"></a>
 
       <!-- nav -->
       <nav class="haeder__nav nav flex">
@@ -88,7 +97,7 @@
         </button>
       </nav>
     </div>
-    <script src="js/burger.js"></script>
+
   </header>
 
   <main class="main">
@@ -96,6 +105,7 @@
     <section id="projects" class="hero">
       <div class="container">
         <div class="swiper">
+
           <div class="swiper__dascr">
             <h1 class="banner-title">
               Проектные решения любой сложности
@@ -103,8 +113,9 @@
             <p class="banner__descr">
               Есть над чем задуматься: базовые сценарии поведения пользователей
               и&nbsp;по&nbsp;сей день остаются уделом проектантов </p>
-            <button class="banner__btn btn-reset">Заказать расчёт</button>
+            <button class="banner__btn btn-reset" aria-label="Заказать расчёт">Заказать расчёт</button>
           </div>
+
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -116,24 +127,6 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-
-
-      <!-- <div class="container">
-        <div class="hero__banner banner">
-          <div class="banner__slider banner__slider-1">
-            <h1 class="banner-title">
-              Проектные решения любой сложности
-            </h1>
-            <p class="banner__descr">
-              Есть над чем задуматься: базовые сценарии поведения пользователей
-              и&nbsp;по&nbsp;сей день остаются уделом проектантов
-            </p>
-            <button class="banner__btn btn-reset">Заказать расчёт</button>
-          </div>
-        </div>
-      </div> -->
-
-      <script src="js/swiper.js"></script>
     </section>
 
     <section id="abuotUs" class="about-us">
@@ -161,7 +154,7 @@
                 </p>
               </div>
               <div class="right__btn">
-                <button class="btn btn-reset flex">
+                <button class="btn btn-reset flex" aria-label=" Подробнее">
                   Подробнее
                 </button>
               </div>
@@ -225,8 +218,8 @@
               ответу.
             </p>
             <div class="dascription__btn flex">
-              <button class="dascription__buttom_min btn-reset">Подробнее</button>
-              <button class="dascription__buttom_block btn-reset">Договор</button>
+              <button class="dascription__buttom_min btn-reset" aria-label=" Подробнее">Подробнее</button>
+              <button class="dascription__buttom_block btn-reset" aria-label=" Договор">Договор</button>
             </div>
           </div>
           <div class="dascription__img-A">
@@ -246,8 +239,8 @@
               источников, современные исследования подвергнуты целой серии независимых исследований.
             </p>
             <div class="dascription__btn flex">
-              <button class="dascription__buttom_min btn-reset">Подробнее</button>
-              <button class="dascription__buttom_block btn-reset">Договор</button>
+              <button class="dascription__buttom_min btn-reset" aria-label=" Подробнее">Подробнее</button>
+              <button class="dascription__buttom_block btn-reset" aria-label=" Договор">Договор</button>
             </div>
           </div>
           <div class="dascription__img-B">
@@ -269,8 +262,8 @@
               выполнить важные задания по разработке прогресса профессионального сообщества.
             </p>
             <div class="dascription__btn flex">
-              <button class="dascription__buttom_min btn-reset">Подробнее</button>
-              <button class="dascription__buttom_block btn-reset">Договор</button>
+              <button class="dascription__buttom_min btn-reset" aria-label=" Подробнее">Подробнее </button>
+              <button class="dascription__buttom_block btn-reset" aria-label="Договор">Договор</button>
             </div>
           </div>
           <div class="dascription__img-C">
@@ -290,8 +283,8 @@
               информационно-пропагандистское обеспечение нашей деятельности позволяет.
             </p>
             <div class="dascription__btn flex">
-              <button class="dascription__buttom_min btn-reset">Подробнее</button>
-              <button class="dascription__buttom_block btn-reset">Договор</button>
+              <button class="dascription__buttom_min btn-reset" aria-label="Подробнее">Подробнее</button>
+              <button class="dascription__buttom_block btn-reset" aria-label="Договор">Договор</button>
             </div>
           </div>
           <div class="dascription__img-D">
@@ -299,7 +292,7 @@
         </div>
 
       </div>
-      <script src="js/tabs.js"></script>
+
     </section>
 
     <section id="reviews" class="faq">
@@ -431,9 +424,7 @@
           </li>
         </ul>
       </div>
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-      <script src="js/accordion.js"></script>
+
     </section>
 
   </main>
@@ -442,7 +433,7 @@
     <div class="container">
       <div class="footer__sections flex">
         <div class="footer__right right">
-          <a href="#" class=" right__logo logo"><img class="right__logo_link" src="img/Logo-footer.svg"
+          <a href="#" class=" right__logo logo"><img class="right__logo_link" src="img/Logo-footer.svg" loading="lazy"
               alt="Euclid"></a>
           <div class=" right__nav flex">
             <a href="#abuotUs" class="right__link">О&nbsp;нас</a>
@@ -488,9 +479,9 @@
         </div>
 
         <div class="footer__application flex">
-          <h4 class="footer__application_title">
+          <h3 class="footer__application_title">
             Оставить заявку
-          </h4>
+          </h3>
           <div class="footer__form">
             <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="form__parent flex">
               <label class="label">
@@ -507,7 +498,7 @@
                 <textarea class="form__input_message" name="message" placeholder="Сообщение"></textarea>
               </label>
               <div class="form__bottom flex">
-                <button class="form__btn btn-reset">Отправить данные</button>
+                <button class="form__btn btn-reset" aria-label="Отправить данные">Отправить данные</button>
                 <label for="check" class="form__check">
                   <input type="checkbox" name="check" id="check" class="form__checkbox" requiredgid>
                   Согласен на обработку данных
